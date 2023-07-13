@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1670</width>
+    <height>888</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1670</width>
+    <height>888</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1670</width>
+    <height>888</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Minha Biblioteca</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>1671</width>
+      <height>881</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>icons/main_window.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ProximaLeitura">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>382</y>
+      <width>751</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_TotalLivros">
+    <property name="geometry">
+     <rect>
+      <x>238</x>
+      <y>83</y>
+      <width>751</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_TotalPaginas">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>136</y>
+      <width>751</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_GeneroFav">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>180</y>
+      <width>745</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_AutorFav">
+    <property name="geometry">
+     <rect>
+      <x>187</x>
+      <y>231</y>
+      <width>751</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_AutorFav_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>282</y>
+      <width>751</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_MetaCumprida">
+    <property name="geometry">
+     <rect>
+      <x>1545</x>
+      <y>275</y>
+      <width>110</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 255, 127);
+alternate-background-color: rgb(170, 255, 127);
+font: 8pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Meta cumprida</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_DescartarMeta">
+    <property name="geometry">
+     <rect>
+      <x>1545</x>
+      <y>309</y>
+      <width>110</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">alternate-background-color: rgb(240, 65, 68);
+background-color: rgb(240, 65, 68);</string>
+    </property>
+    <property name="text">
+     <string>Descartar meta</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_NovaMeta">
+    <property name="geometry">
+     <rect>
+      <x>1545</x>
+      <y>240</y>
+      <width>110</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 255, 255);
+font: 8pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Nova Meta</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>38</x>
+      <y>495</y>
+      <width>1494</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>índex</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Título</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Autor</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Nota</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="pushButton_finalizado">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>378</y>
+      <width>93</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Finalizado</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_prazo">
+    <property name="geometry">
+     <rect>
+      <x>1055</x>
+      <y>290</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_meta">
+    <property name="geometry">
+     <rect>
+      <x>1055</x>
+      <y>70</y>
+      <width>461</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1670</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAdicionar_livro">
+    <property name="title">
+     <string>Adicionar livro</string>
+    </property>
+    <addaction name="actionAdicionar_manualmente"/>
+    <addaction name="actionAdicionar_a_partir_de_um_arquivo"/>
+   </widget>
+   <widget class="QMenu" name="menuBusca_avan_ada">
+    <property name="title">
+     <string>Busca avançada</string>
+    </property>
+    <addaction name="actionBuscar"/>
+   </widget>
+   <widget class="QMenu" name="menuProximas_leituras">
+    <property name="title">
+     <string>Próximas leituras</string>
+    </property>
+    <addaction name="actionInserir_titulo"/>
+   </widget>
+   <addaction name="menuAdicionar_livro"/>
+   <addaction name="menuBusca_avan_ada"/>
+   <addaction name="menuProximas_leituras"/>
+  </widget>
+  <action name="actionAdicionar_manualmente">
+   <property name="text">
+    <string>Adicionar manualmente</string>
+   </property>
+  </action>
+  <action name="actionAdicionar_a_partir_de_um_arquivo">
+   <property name="text">
+    <string>Adicionar a partir de um arquivo</string>
+   </property>
+  </action>
+  <action name="actionInserir_titulo">
+   <property name="text">
+    <string>Inserir título</string>
+   </property>
+  </action>
+  <action name="actionBuscar">
+   <property name="text">
+    <string>Buscar Livros</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
