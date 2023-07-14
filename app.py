@@ -1,19 +1,19 @@
+from scripts import EditarLivro
+from scripts.Main_Window import Ui_MainWindow
+from scripts import AdicionarLivroManualmente
+from scripts import AdicionarLivroArquivo
+from scripts import AdicionarGenero
+from scripts import DB_Operations
+from scripts import ProximasLeituras
+from scripts import BuscaAvancada
+from scripts import NovaMeta
+from scripts import Livro
+from PyQt5 import QtWidgets, QtCore
+from PyQt5.QtWidgets import QMessageBox, QFileDialog
 import sys
 import time
 import datetime
-from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtWidgets import QMessageBox, QFileDialog
 import csv
-import EditarLivro
-from Main_Window import Ui_MainWindow
-import AdicionarLivroManualmente
-import AdicionarLivroArquivo
-import AdicionarGenero
-import DB_Operations
-import ProximasLeituras
-import BuscaAvancada
-import NovaMeta
-import Livro
 
 
 #Cria a classe da janela principal da aplicação

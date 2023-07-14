@@ -39,7 +39,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>icons/main_window.png</pixmap>
+     <pixmap>../design/main_window.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_ProximaLeitura">

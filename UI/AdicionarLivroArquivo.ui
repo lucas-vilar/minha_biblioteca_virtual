@@ -51,7 +51,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>icons/adicionar_livro_arquivo.png</pixmap>
+    <pixmap>../design/adicionar_livro_arquivo.png</pixmap>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget">
