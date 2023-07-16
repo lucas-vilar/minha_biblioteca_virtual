@@ -1,5 +1,6 @@
 livros.db
 venv/
+design/
 scripts/__pycache__/
 __pycache__/
 .idea/**/workspace.xml
