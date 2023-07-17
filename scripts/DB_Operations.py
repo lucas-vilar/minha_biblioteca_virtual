@@ -38,7 +38,7 @@ def inserir_livro(livro):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
     cursor.execute(f'''INSERT INTO livros VALUES (
-    {livro.id}, '{livro.titulo}', '{livro.autor}', '{livro.ano_lancamento}', {livro.n_paginas}, '{livro.genero}', '{livro.data_finalizado}', {livro.nota}, '{livro.editora}', '{livro.resenha}');''')
+    {livro.id}, "{livro.titulo}", "{livro.autor}", "{livro.ano_lancamento}", {livro.n_paginas}, "{livro.genero}", "{livro.data_finalizado}", {livro.nota}, "{livro.editora}", "{livro.resenha}");''')
     connection.commit()
     cursor.close()
 
@@ -77,14 +77,14 @@ def altera_livro(livro):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
     cursor.execute(f''' UPDATE livros SET titulo = '{livro.titulo}', 
-    autor = '{livro.autor}',
-    ano_lanc = '{livro.ano_lancamento}',
+    autor = "{livro.autor}",
+    ano_lanc = "{livro.ano_lancamento}",
     n_paginas = {livro.n_paginas},
-    genero = '{livro.genero}',
-    data_finalizado = '{livro.data_finalizado}',
+    genero = "{livro.genero}",
+    data_finalizado = "{livro.data_finalizado}",
     nota = {livro.nota},
-    editora = '{livro.editora}',
-    resenha = '{livro.resenha}' 
+    editora = "{livro.editora}",
+    resenha = "{livro.resenha}" 
     WHERE id = {livro.id};''')
     connection.commit()
     cursor.close()
@@ -161,7 +161,7 @@ def editora_favorita():
 def retorna_titulos_parciais(entrada):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    resultados = cursor.execute(f'''SELECT * FROM livros WHERE titulo LIKE '%{entrada}%' ORDER BY id DESC;''').fetchall()
+    resultados = cursor.execute(f'''SELECT * FROM livros WHERE titulo LIKE "%{entrada}%" ORDER BY id DESC;''').fetchall()
     cursor.close()
     return resultados
 
@@ -170,7 +170,7 @@ def retorna_titulos_parciais(entrada):
 def retorna_autor_selecionado(entrada):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    resultados = cursor.execute(f'''SELECT * FROM livros WHERE autor LIKE '%{entrada}%' ORDER BY id DESC;''').fetchall()
+    resultados = cursor.execute(f'''SELECT * FROM livros WHERE autor LIKE "%{entrada}%" ORDER BY id DESC;''').fetchall()
     cursor.close()
     return resultados
 
@@ -179,7 +179,7 @@ def retorna_autor_selecionado(entrada):
 def retorna_genero_selecionado(entrada):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    resultados = cursor.execute(f'''SELECT * FROM livros WHERE genero = '{entrada}' ORDER BY id DESC;''').fetchall()
+    resultados = cursor.execute(f'''SELECT * FROM livros WHERE genero = "{entrada}" ORDER BY id DESC;''').fetchall()
     cursor.close()
     return resultados
 
@@ -206,7 +206,7 @@ def retorna_publicacao_selecionado(entrada):
 def retorna_finalizado_selecionado(entrada1, entrada2):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    resultados = cursor.execute(f'''SELECT * FROM livros WHERE data_finalizado BETWEEN '{entrada1}' AND '{entrada2}' ORDER BY id DESC;''').fetchall()
+    resultados = cursor.execute(f'''SELECT * FROM livros WHERE data_finalizado BETWEEN "{entrada1}" AND "{entrada2}" ORDER BY id DESC;''').fetchall()
     cursor.close()
     return resultados
 
@@ -216,7 +216,7 @@ def retorna_finalizado_selecionado(entrada1, entrada2):
 def inserir_genero(genero):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    cursor.execute(f'''INSERT INTO generos VALUES ('{genero}');''')
+    cursor.execute(f'''INSERT INTO generos VALUES ("{genero}");''')
     connection.commit()
     cursor.close()
 
@@ -234,7 +234,7 @@ def busca_todos_generos():
 def checa_genero(genero):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    checa_generos = cursor.execute(f'''SELECT genero FROM generos WHERE genero = '{genero}'; ''').fetchall()
+    checa_generos = cursor.execute(f'''SELECT genero FROM generos WHERE genero = "{genero}"; ''').fetchall()
     if not checa_generos:
         inserir_genero(genero)
 
@@ -244,7 +244,7 @@ def checa_genero(genero):
 def insere_proxima_leitura(titulo):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    cursor.execute(f'''INSERT INTO proximas_leituras VALUES ('{titulo}');''')
+    cursor.execute(f'''INSERT INTO proximas_leituras VALUES ("{titulo}");''')
     connection.commit()
     cursor.close()
 
@@ -271,7 +271,7 @@ def busca_proxima_leitura():
 def deleta_proxima_leitura(titulo):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    cursor.execute(f'''DELETE FROM proximas_leituras WHERE titulo = '{titulo}';''')
+    cursor.execute(f'''DELETE FROM proximas_leituras WHERE titulo = "{titulo}";''')
     connection.commit()
     cursor.close()
 
@@ -281,7 +281,7 @@ def deleta_proxima_leitura(titulo):
 def insere_meta(titulo, prazo):
     connection = sqlite3.connect('livros.db')
     cursor = connection.cursor()
-    cursor.execute(f'''INSERT INTO metas VALUES('{titulo}','{prazo}');''')
+    cursor.execute(f'''INSERT INTO metas VALUES("{titulo}","{prazo}");''')
     connection.commit()
     cursor.close()
 
