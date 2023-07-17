@@ -90,6 +90,6 @@ To create future readings click "Próximas leituras" >  "Inserir título". To ad
 
 The next title will be shown in the main window.
 
-If you finish the book click "Finalizado" to remove it from the queue and manually insert into the collection.
+If you finish the book, click "Finalizado" to remove it from the queue and manually insert into the collection.
 
 
