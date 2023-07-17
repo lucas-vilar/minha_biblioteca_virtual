@@ -6,7 +6,7 @@ Just like My virtual bookshelf, "Minha biblioteca virtual" is a Book collection 
 
 This was my first Python project after doing Codecademy Python courses. I had the chance to put my knowledge into practice, and also learn how to use PyQt5 to create GUI applications and work with SQLite3 in Python.  
 
-To start the program just run the app.py
+To start the application, run the app.py
 
 ## Inserting a new book 📖
  There are two ways to insert new books in Minha biblioteca virtual:
